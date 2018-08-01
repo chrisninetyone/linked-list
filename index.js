@@ -1,23 +1,21 @@
 
 
+    createBookmark = () =>{
+        var readBtn = $(".read-btn");
+        var websiteTitle = $("#website-title-input").val();
+        var websiteUrl = $('#website-url-input').val();
+        $('.bookmarks').append(`<div>${websiteTitle}${websiteUrl}<button id="read-btn">Read</button><button id="delete-btn">Delete</button></div>`);
+    };
 
-
-//defining the website title input as a string to display
-var websiteTitle = $("#website-title-input").val();
-
-//defining the url input as a string to display (link?)
-var websiteUrl = $('#website-url-input').val();
-
-// //Make a function to create a bookmark
-// createBookmark () => {
-
-// }
-
+removeBookmark = () => {
+    $(this).parent().remove();
+};
 
 $('.enter-guess').on('click', () => {
-    var websiteTitle = $("#website-title-input").val();
-    var websiteUrl = $('#website-url-input').val();
-    $('.website-title').text(websiteTitle);
-    $('.website-url').text(websiteUrl);
+    createBookmark();
 
-})
+});
+
+$('#delete-btn').on('click', () => {
+    removeBookmark();
+});
