@@ -1,36 +1,43 @@
+// removeBookmark = () => {
+// 	console.log('boom');
+// 	$(this)
+// 		.parent()
+// 		.remove();
+// };
+
+
 createBookmark = () => {
-	var readBtn = $('.read-btn');
 	var websiteTitle = $('#website-title-input').val();
-	var websiteUrl = $('#website-url-input').val();
+    var websiteUrl = $('#website-url-input').val();
+
+
+
+
+
+
 	$('.bookmarks').append(
-        `<div>
-            <h3>${websiteTitle}${websiteUrl}</h3>
-            <button class="read-btn">Read</button>
-            <button class="delete-btn">Delete</button>
+        `<div class="outer-bookmark-box">
+            <div class="inner-bookmark-box">
+                <h3 class="user-input">${websiteTitle}</h3>
+                <h4 class="user-input">${websiteUrl}</h4>
+                    <button class="read-btn">Read</button>
+                        <button class="delete-btn">Delete</button>
+            </div>
         </div>`
-	);
+    );
+    $('.bookmarks').on('click', '.delete-btn', () => {
+        console.log('boom')
+        $('.outer-bookmark-box').children().remove();
+    });
+        // this is delteting ALL children/bookmarks
 };
 
-removeBookmark = () => {
-	console.log('boom');
-	$(this)
-		.parent()
-		.remove();
-};
 
 $('.enter-guess').on('click', () => {
 	createBookmark();
 });
 
-$('#delete-btn').on('click', () => {
-	removeBookmark();
-});
 
 // you have to select the parent of the HTML element that is being selected for jQuery to recognize it
 
-$('.bookmarks').on('click', '.delete-btn', () => {
-    console.log('boom')
-	$(this)
-		.parent('div')
-		.remove();
-});
+
