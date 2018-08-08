@@ -7,27 +7,26 @@ createBookmark = () => {
 
 	$('.bookmarks').append(
         `<div class="outer-bookmark-box">
-            <div class="inner-bookmark-box">
-                <h3 class="user-input">${websiteTitle}</h3>
-                <h4 class="user-input" id="website-url">${websiteUrl}</h4>
+
+                <h3 class="website-title">${websiteTitle}</h3>
+                <h4 class="website-url">${websiteUrl}</h4>
                     <button class="read-btn">Read</button>
-                        <button class="delete-btn">Delete</button>
-            </div>
+                    <button class="delete-btn">Delete</button>
+
         </div>`
     );
-    $('.bookmarks').on('click', '.delete-btn', () => {
+    $('.bookmarks').on('click', '.delete-btn', function() {
         console.log('boom');
-        $('.outer-bookmark-box').children().remove();
+        $(this).parent().remove();
     });
-        // this is delteting ALL children/bookmarks
-    $('.bookmarks').on('click', '.read-btn', () => {
-        console.log('boom');
-        $('.inner-bookmark-box').css('background-color', '#F2F4F4');
-        $('#website-url').css('text-decoration', 'underline');
-        $('.read-btn').css('color', 'red').css('text-decoration', 'none');
-        $
+
+    $('.bookmarks').on('click', '.read-btn', function() {
+        if ($(this).parent().hasClass('read')) {
+            $(this).parent().removeClass('read');
+        } else {
+            $(this).parent().addClass('read')
+        }
     });
-    //Ideas: Add a class, toggle class, do .css() and .text
 };
 
 

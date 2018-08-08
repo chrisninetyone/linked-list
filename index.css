@@ -73,6 +73,13 @@ header {
     background-color: #CFD8DC;
     padding: 10px;
 }
-.user-input {
-    color:
+.read {
+    background-color: #F2F4F4;
+}
+.read .read-btn {
+    color: red;
+}
+.read .website-url{
+    text-decoration: underline;
+    text-decoration-color: #CFD8DC;
 }
