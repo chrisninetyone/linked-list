@@ -90,3 +90,6 @@ header {
         width: 100%;
     }
 }
+button:disabled {
+    background-color: grey;
+}

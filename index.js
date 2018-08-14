@@ -4,7 +4,6 @@ createBookmark = function() {
 	const websiteTitle = $('#website-title-input').val();
     const websiteUrl = $('#website-url-input').val();
 
-
 	$('.bookmarks').append(
         `<div class="outer-bookmark-box">
             <h3 class="website-title">${websiteTitle}</h3>
@@ -26,14 +25,17 @@ createBookmark = function() {
     });
 };
 
-// function disable() {
-//     if ($('.website-title').val() ==== "" || ($('.website-url').val() === "")) {
-//         $('.enter-guess').prop('disabled', true);
-//     }
-// }
+
+$('.inputs').on('keyup', function() {
+    if ($('#website-title-input').val() === '' || ($('#website-url-input').val() === '')) {
+        $('.enter-guess').prop('disabled', true);
+        } else {
+            $(".enter-guess").prop('disabled', false);
+        }
+})
 
 $('.enter-guess').on('click', function() {
-        createBookmark();
+    createBookmark();
 });
 
 //Add a counter
