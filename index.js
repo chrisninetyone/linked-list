@@ -23,7 +23,17 @@ createBookmark = function() {
             $(this).parent().addClass('read');
         }
     });
+
+    // const count = 0;
+    // $(".enter-guess").click(function() {
+    //     count++;
+    //     $("#counter").html("My current count is: "+count);
+    // });
+    // $('.bookmarks').append(
+    //     `<h5>"The current count is "`
+    // )
 };
+
 
 
 $('.inputs').on('keyup', function() {
@@ -38,12 +48,13 @@ $('.enter-guess').on('click', function() {
     createBookmark();
 });
 
-//Add a counter
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        createBookmark();
+    }
+});
+//must disable when inputs empty
 
-// $(".enter-guess").click(function() {
-//     count++;
-//     $("#counter").html("My current count is: "+count);
-// });
 
 
 // you have to select the parent of the HTML element that is being selected for jQuery to recognize it
