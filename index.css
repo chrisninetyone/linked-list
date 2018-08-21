@@ -7,7 +7,9 @@ body {
 header {
     width: 100%;
     position: relative;
-    margin: 20px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
 }
 .bookmarks {
     background-color: #CFD8DC;
@@ -22,9 +24,11 @@ header {
 header {
     color: #FFFFFF;
     font-weight: 800;
+    font-size: 30px;
 }
 .enter-guess {
     color: #FFFFFF;
+    font-size: 14px;
     background-color: #FFC107;
     border: none;
     outline: none;
@@ -38,19 +42,21 @@ header {
 
 .read-btn {
     color: #455A64;
+    font-size: 14px;
     outline: none;
     border: none;
     background-color: white;
     text-decoration: underline;
-    text-decoration-color: #CFD8DC;
+    text-decoration-color: #F2F4F4;
 }
 .delete-btn {
     color: #455A64;
+    font-size: 14px;
     outline: none;
     border: none;
     background-color: white;
     text-decoration: underline;
-    text-decoration-color: #CFD8DC;
+    text-decoration-color: #F2F4F4;
 }
 #left-side {
     float: left;
@@ -72,6 +78,9 @@ header {
 .outer-bookmark-box {
     background-color: #CFD8DC;
     padding: 10px;
+    margin: 10px;
+    border: 1px solid #607D8B;
+    background-color: white;
 }
 .read {
     background-color: #F2F4F4;
@@ -92,4 +101,28 @@ header {
 }
 button:disabled {
     background-color: grey;
+}
+.website-title {
+    color: #455A64;
+    font-size: 22px;
+    padding: 10px;
+}
+.website-url {
+    color: #607D8B;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-color: #F2F4F4;
+    padding: 10px;
+}
+.website-url:hover {
+    color: #455A64;
+    text-decoration-color: #FFC107;
+}
+.read-btn:hover {
+    color: #455A64;
+    text-decoration-color: #FFC107;
+}
+.delete-btn:hover {
+    color: #455A64;
+    text-decoration-color: #FFC107;
 }

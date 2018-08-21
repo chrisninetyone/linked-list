@@ -56,7 +56,7 @@ $(document).keypress(function(e) {
 //must disable when inputs empty
 
 
+//make a counter for bookmarks
+// $('.bookmarks').append($(this).children().length);
 
 // you have to select the parent of the HTML element that is being selected for jQuery to recognize it
-
-
