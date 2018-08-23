@@ -7,25 +7,28 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div id="left-side">
-    <header>
-        <h1>Linked <span><img src="linked-list-logo.svg" alt="Linked List Logo" height="20" width="20"></span> List</h1>
-    </header>
-    <div>
-        <input class="inputs" id="website-title-input" placeholder="Website Title" type="text"/>
+<div class="container">
+    <div id="left-side">
+        <header>
+            <h1>Linked <img src="linked-list-logo.svg" alt="Linked List Logo"> List</h1>
+        </header>
+        <div>
+            <input class="inputs" id="website-title-input" placeholder="Website Title" type="text"/>
+        </div>
+        <div>
+            <input class="inputs" id="website-url-input" placeholder="Website URL" type="url"/>
+        </div>
+        <div>
+            <button class="enter-guess" disabled>Enter</button>
+        </div>
+        <div class="counters">
+            <p class="total"></p>
+            <p class="read-counter"></p>
+            <p class="unread-counter"></p>
+        </div>
     </div>
-    <div>
-        <input class="inputs" id="website-url-input" placeholder="Website URL" type="url"/>
-    </div>
-    <div>
-        <button class="enter-guess" disabled>Enter</button>
-    </div>
-</div>
-
-
     <div class="bookmarks" id="right-side"></div>
-    <div class='read-bookmarks'></div>
-
+</div>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 </script>
